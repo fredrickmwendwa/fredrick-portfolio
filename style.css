@@ -157,7 +157,15 @@ li {
 .section-subtitle {
   max-width: 600px;
 }
-
+.tools{
+  display: flex;
+  gap: 32px;
+}
+.tech-stack{
+  background-color: #38bdf8;
+  padding: 16px 32px;
+  border-radius: 12px;
+}
 .header {
   position: fixed;
   top: 0;
@@ -340,90 +348,16 @@ li {
 /* FOOTER SECTION */
 .footer {
   background-color: #0F172A;
-  padding: 70px 0 0;
+  padding: 20px 0;
   position: relative;
   overflow: hidden;
 }
 
 .footer-content {
-  position: relative;
-}
-.tools{
-  display: flex;
-  gap: 32px;
-}
-.tech-stack{
-  background-color: #38bdf8;
-  padding: 16px 32px;
-  border-radius: 12px;
-}
-
-.footer-main {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 60px;
-  margin-bottom: 50px;
-}
-.footer-brand{
-  display: flex;
-  flex-direction: column;
-}
-.logo2{
-  height: 50px;
-}
-.footer-description{
-  color: white;
-}
-.footer-title{
-  color: white;
-  position: relative;
-  margin-bottom: 8px;
-}
-.footer-title::after {
-  content: "";
-  position: absolute;
-  bottom: 5px;
-  left: 0;
-  width: 30px;
-  height: 2px;
-  background: linear-gradient(135deg, #2563eb 0%, #38bdf8 100%);
-  border-radius: 1px;
-}
-
-.footer-content{
-  padding: 16px;
-}
-.footer a{
-  color: white;
-}
-.footer-links {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-}
-.footer-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.footer-list a {
-  color: rgba(255, 255, 255, 0.7);
-  transition: all 0.3s ease;
-}
-
-.footer-list a:hover {
-  color: #2563EB;
-}
-.footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 20px;
-}
-.footer-bottom-content{
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .copyright {
   font-size: 14px;
   font-weight: 400;
@@ -431,7 +365,7 @@ li {
 }
 .footer-legal{
   display: flex;
-  gap: 24px;
+  gap: 32px;
 }
 .footer-legal a {
   color: rgba(255, 255, 255, 0.7);
@@ -441,5 +375,20 @@ li {
 }
 
 .footer-legal a:hover {
+  color: #2563EB;
+}
+
+.footer-social{
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.footer-social a{
+  height: 14px;
+  width: 14px;
+  color: rgb(182, 182, 182);
+  transition: color 0.3s ease;
+}
+.footer-social a:hover{
   color: #2563EB;
 }
