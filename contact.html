@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About me</title>
+    <meta
+      name="description"
+      content="Frontend developer based in Nairobi, Kenya. I design, prototype, and build production React apps focused on performance, accessibility, and measurable impact. View work or book a 15-minute intro."
+    />
+    <!-- Favicon setup -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--Header Section-->
+    <header class="header">
+      <div class="header-container">
+        <div class="logo">
+          <a href="#">FM</a>
+        </div>
+
+        <!-- DESKTOP NAVIGATION -->
+        <nav>
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="projects.html" class="nav-link">Projects</a></li>
+            <li><a href="contact.html" class="nav-link active">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <a href="#work" class="btn btn-primary">Hire me</a>
+        </div>
+        <div class="menu-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>Let’s Work Together</h1>
+          <p>
+            Whether you’re hiring, collaborating or starting a new project, I’d
+            love to hear from you.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div>
+            <p>Email:</p>
+            <a href="mailto:mwendwafredrick196@gmail.com"
+              >mwendwafredrick196@gmail.com</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="title">
+            <h2 class="section-title">Send me a message</h2>
+            <p class="section-subtitle">I typically respond within 24 hours</p>
+          </div>
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" placeholder="Your Name" id="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input
+                type="email"
+                placeholder="Your Email Address"
+                id="email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="message">Project Details *</label>
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Tell me about your project..."
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <!--FOOTER SECTION-->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p class="copyright">
+            &copy; 2025 Fredrick Mwendwa. All rights reserved.
+          </p>
+          <div class="footer-social">
+            <a href="#"><i data-lucide="github"></i></a>
+            <a href="#"><i data-lucide="linkedin"></i></a>
+            <a href="#"><i data-lucide="twitter"></i></a>
+            <a href="#"><i data-lucide="mail"></i></a>
+          </div>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
