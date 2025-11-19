@@ -31,15 +31,15 @@
     />
   </head>
   <body>
-    <!--Header Section-->
-    <header class="header">
+    <!-- Header Section -->
+    <header class="header" id="header">
       <div class="header-container">
         <div class="logo">
           <a href="#">FM</a>
         </div>
 
-        <!-- DESKTOP NAVIGATION -->
-        <nav>
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
           <ul class="nav-list">
             <li><a href="index.html" class="nav-link active">Home</a></li>
             <li><a href="about.html" class="nav-link">About</a></li>
@@ -47,44 +47,72 @@
             <li><a href="contact.html" class="nav-link">Contact</a></li>
           </ul>
         </nav>
-        <div>
+
+        <div class="header-cta">
           <a href="#work" class="btn btn-primary">Hire me</a>
         </div>
-        <div class="menu-toggle">
-          <i class="fa-solid fa-bars"></i>
-        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </header>
 
+    <!-- Mobile Navigation -->
+    <div class="overlay" id="overlay"></div>
+    <nav class="mobile-nav" id="mobileNav">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About</a></li>
+        <li><a href="projects.html" class="mobile-nav-link">Projects</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+      </ul>
+      <div class="mobile-nav-actions">
+        <a href="#work" class="btn btn-primary">
+          <i class="fas fa-paper-plane"></i>
+          Hire me
+        </a>
+        <a href="contact.html" class="btn btn-outline">
+          <i class="fas fa-envelope"></i>
+          Get in touch
+        </a>
+      </div>
+    </nav>
+
     <main>
-      <!--Hero section-->
+      <!-- Hero section -->
       <section class="hero">
         <div class="container">
           <div class="hero-content">
             <div class="hero-left">
-              <h1 class="hero-heading">
+              <h1>
                 I build clean, fast, accessible, and visually refined web
                 interfaces.
               </h1>
               <p>
-                Hi, I’m <span>Fredrick Mwendwa</span>, a frontend engineer
+                Hi, I'm <span>Fredrick Mwendwa</span>, a frontend engineer
                 focused on crafting elegant user interfaces with React,
                 TypeScript, Next.js, and modern design systems.
               </p>
               <div class="hero-cta">
-                <a href="#work" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                <a href="#work" class="btn btn-primary"> View My Work </a>
+                <a href="#contact" class="btn btn-secondary"> Contact Me </a>
               </div>
             </div>
 
             <div class="hero-right">
-              <video class="hero-asset" autoplay loop muted playsinline>
-                <source
-                  src="assets/Showreel-Grid-Mobile.mp4"
-                  type="video/mp4"
-                />
-                Your browser does not support the video tag.
-              </video>
+              <div class="hero-visual-container">
+                <video class="hero-visual" autoplay loop muted playsinline>
+                  <source
+                    src="assets/Showreel-Grid-Mobile.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
             </div>
           </div>
         </div>
@@ -237,6 +265,7 @@
         </div>
       </section>
 
+      <!-- skills section -->
       <section class="skills">
         <div class="container">
           <div class="title">
@@ -337,9 +366,15 @@
             &copy; 2025 Fredrick Mwendwa. All rights reserved.
           </p>
           <div class="footer-social">
-            <a href="#"><i class="fa-brands fa-github"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
           </div>
           <div class="footer-legal">
             <a href="#">Privacy Policy</a>
