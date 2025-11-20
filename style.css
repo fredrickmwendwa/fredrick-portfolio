@@ -972,11 +972,6 @@ label {
   }
 
   /* Services & Projects */
-  .service-card,
-  .project-card {
-    padding: 24px 20px;
-  }
-
   .title {
     margin-bottom: 40px;
   }
@@ -1041,10 +1036,6 @@ label {
     grid-template-columns: 1fr;
   }
 
-  .service-card,
-  .project-card {
-    padding: 20px 16px;
-  }
 
   .hero-right {
     height: 250px;
