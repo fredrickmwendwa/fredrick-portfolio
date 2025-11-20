@@ -388,30 +388,6 @@ h3 {
   visibility: visible;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .desktop-nav {
-    display: none;
-  }
-  .header-cta {
-    display: none;
-  }
-
-  .menu-toggle {
-    display: flex;
-  }
-
-  .header-container {
-    padding: 0 16px;
-  }
-}
-
-@media (min-width: 769px) {
-  .mobile-nav,
-  .overlay {
-    display: none;
-  }
-}
 /* HERO SECTION */
 .hero {
   min-height: 100vh;
@@ -510,80 +486,6 @@ h3 {
   }
   to {
     opacity: 1;
-  }
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-20px) rotate(180deg);
-  }
-  100% {
-    transform: translateY(0) rotate(360deg);
-  }
-}
-
-/* Responsive Design */
-@media (max-width: 992px) {
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 40px;
-  }
-
-  .hero-left {
-    max-width: 100%;
-  }
-
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero-right {
-    width: 100%;
-    max-width: 500px;
-    height: 400px;
-  }
-
-  .hero-cta {
-    justify-content: center;
-  }
-
-  .hero-tagline::after {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
-@media (max-width: 576px) {
-  .hero h1 {
-    font-size: 32px;
-    margin-top: 26px;
-    margin-bottom: 0;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  .hero-right {
-    height: 300px;
-    margin: 0;
-    padding: 0;
-  }
-
-  .btn {
-    font-size: 14px;
-  }
-
-  .hero-cta {
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    gap: 8px;
   }
 }
 
@@ -904,4 +806,305 @@ label {
 
 .footer-legal a:hover {
   color: var(--color-primary);
+}
+
+/* ===== RESPONSIVE STYLES ===== */
+
+/* Tablet and Mobile Breakpoints */
+@media screen and (max-width: 1024px) {
+  :root {
+    --fs-h1: 36px;
+    --fs-h2: 28px;
+    --fs-h3: 20px;
+    --fs-body-lg: 16px;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  /* Hero Section */
+  .hero-content {
+    margin-top: 70px;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .hero-left {
+    max-width: 100%;
+  }
+
+  .hero-cta {
+    justify-content: center;
+  }
+
+  .hero-right {
+    width: 400px;
+    height: 400px;
+  }
+
+  /* Services */
+  .all {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  /* Projects */
+  .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  /* Skills */
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+  }
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+  :root {
+    --fs-h1: 32px;
+    --fs-h2: 24px;
+    --fs-h3: 18px;
+  }
+
+  /* Header */
+  .desktop-nav {
+    display: none;
+  }
+
+  .header-cta {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .header-container {
+    padding: 0 20px;
+  }
+
+  /* Hero Section */
+  .hero-right {
+    width: 350px;
+    height: 350px;
+  }
+
+  .hero-visual-container {
+    transform: none;
+  }
+
+  /* Services & Projects */
+  .all,
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+
+  /* Skills */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skill-card {
+    padding: 24px;
+  }
+
+  /* Footer */
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+
+    
+    grid-template-columns: 1fr;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .footer-legal {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+  :root {
+    --fs-h1: 28px;
+    --fs-h2: 22px;
+    --fs-h3: 18px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  /* Header */
+  .header-container {
+    padding: 0 16px;
+  }
+
+  /* Hero Section */
+  .hero-right {
+    width: 100%;
+    height: 300px;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-cta .btn {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  /* Services & Projects */
+  .service-card,
+  .project-card {
+    padding: 24px 20px;
+  }
+
+  .title {
+    margin-bottom: 40px;
+  }
+
+  /* Skills */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .skill-card {
+    padding: 20px;
+  }
+
+  .tech-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* CTA Section */
+  .cta .container {
+    text-align: center;
+  }
+
+  .cta-content {
+    text-align: center;
+  }
+
+  /* Project Tech Tags */
+  .project-tech {
+    gap: 6px;
+  }
+
+  .tag {
+    padding: 4px 10px;
+    font-size: 12px;
+  }
+
+  /* Mobile Navigation */
+  .mobile-nav {
+    width: 85%;
+  }
+
+  .mobile-nav-actions {
+    gap: 12px;
+  }
+
+  .mobile-nav-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 360px) {
+  :root {
+    --fs-h1: 24px;
+    --fs-h2: 20px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card,
+  .project-card {
+    padding: 20px 16px;
+  }
+
+  .hero-right {
+    height: 250px;
+  }
+}
+
+/* Large Desktop */
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+/* Fix for mobile menu functionality */
+.mobile-nav.active {
+  right: 0;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Menu toggle animation */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Ensure images are responsive */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Improve touch targets for mobile */
+@media (max-width: 768px) {
+  .nav-link,
+  .btn,
+  .tag {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-nav-link {
+    min-height: 50px;
+  }
+}
+
+/* Prevent horizontal scroll */
+html, body {
+  overflow-x: hidden;
 }
