@@ -808,39 +808,20 @@ label {
   color: var(--color-primary);
 }
 
+
 /* ===== RESPONSIVE STYLES ===== */
 
-/* Tablet and Mobile Breakpoints */
-@media screen and (max-width: 1024px) {
+/* Tablet Devices (1024px and below) */
+@media (max-width: 1024px) {
   :root {
-    --fs-h1: 36px;
+    --fs-h1: 40px;
     --fs-h2: 28px;
-    --fs-h3: 20px;
+    --fs-h3: 22px;
     --fs-body-lg: 16px;
   }
 
-  section {
-    padding: 60px 0;
-  }
-
-  .container {
-    padding: 0 20px;
-  }
-
-  /* Hero Section */
   .hero-content {
-    margin-top: 70px;
-    flex-direction: column;
-    gap: 16px;
-    text-align: center;
-  }
-
-  .hero-left {
-    max-width: 100%;
-  }
-
-  .hero-cta {
-    justify-content: center;
+    gap: 40px;
   }
 
   .hero-right {
@@ -848,34 +829,35 @@ label {
     height: 400px;
   }
 
-  /* Services */
-  .all {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-  }
-
-  /* Projects */
+  .all,
   .project-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
   }
 
-  /* Skills */
-  .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 16px;
+  section {
+    padding: 80px 0;
   }
 }
 
-/* Tablet */
-@media screen and (max-width: 768px) {
+/* Small Tablets (768px and below) */
+@media (max-width: 768px) {
   :root {
-    --fs-h1: 32px;
-    --fs-h2: 24px;
-    --fs-h3: 18px;
+    --fs-h1: 36px;
+    --fs-h2: 26px;
+    --fs-h3: 20px;
   }
 
-  /* Header */
+  .container {
+    padding: 0 20px;
+  }
+
+  /* Header Mobile Styles */
   .desktop-nav {
     display: none;
   }
@@ -888,21 +870,37 @@ label {
     display: flex;
   }
 
-  .header-container {
-    padding: 0 20px;
+  /* Hero Section Mobile */
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+
   }
 
-  /* Hero Section */
+  .hero-left {
+    max-width: 100%;
+  }
+
+  .hero-cta {
+    justify-content: center;
+  }
+
   .hero-right {
-    width: 350px;
-    height: 350px;
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
   }
 
   .hero-visual-container {
     transform: none;
   }
 
-  /* Services & Projects */
+  .hero-visual-container:hover {
+    transform: none;
+  }
+
+  /* Services & Projects Mobile */
   .all,
   .project-grid {
     grid-template-columns: 1fr;
@@ -910,38 +908,46 @@ label {
   }
 
 
-  /* Skills */
+  /* Skills Grid Mobile */
   .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 16px;
   }
 
   .skill-card {
     padding: 24px;
   }
 
-  /* Footer */
+  /* Footer Mobile */
   .footer-content {
     display: flex;
     flex-direction: column;
-
-    
     grid-template-columns: 1fr;
-    gap: 8px;
     text-align: center;
+    gap: 8px;
   }
 
   .footer-legal {
     justify-content: center;
     flex-wrap: wrap;
   }
+
+  section {
+    padding: 60px 0;
+  }
+
+  .title {
+    margin-bottom: 40px;
+  }
 }
 
-/* Mobile */
-@media screen and (max-width: 480px) {
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
   :root {
-    --fs-h1: 28px;
-    --fs-h2: 22px;
+    --fs-h1: 32px;
+    --fs-h2: 24px;
     --fs-h3: 18px;
+    --fs-body: 14px;
   }
 
   .container {
@@ -953,27 +959,29 @@ label {
     padding: 0 16px;
   }
 
-  /* Hero Section */
-  .hero-right {
-    width: 100%;
-    height: 300px;
-    max-width: 300px;
-    margin: 0 auto;
+  .logo a {
+    font-size: 28px;
   }
 
+  /* Hero Section */
   .hero-cta {
     flex-direction: column;
     align-items: center;
   }
 
   .hero-cta .btn {
-    width: 100%;
-    max-width: 200px;
+    max-width: 280px;
   }
 
-  /* Services & Projects */
-  .title {
-    margin-bottom: 40px;
+  .hero-right {
+    height: 250px;
+  }
+
+  /* Cards */
+
+  .all,
+  .project-grid {
+    grid-template-columns: 1fr;
   }
 
   /* Skills */
@@ -991,16 +999,13 @@ label {
     height: 40px;
   }
 
-  /* CTA Section */
-  .cta .container {
-    text-align: center;
+  /* Buttons */
+  .btn {
+    padding: 10px 20px;
+    font-size: 13px;
   }
 
-  .cta-content {
-    text-align: center;
-  }
-
-  /* Project Tech Tags */
+  /* Project Tags */
   .project-tech {
     gap: 6px;
   }
@@ -1010,46 +1015,59 @@ label {
     font-size: 12px;
   }
 
-  /* Mobile Navigation */
-  .mobile-nav {
-    width: 85%;
+  section {
+    padding: 50px 0;
   }
 
-  .mobile-nav-actions {
-    gap: 12px;
-  }
-
-  .mobile-nav-actions .btn {
-    width: 100%;
-    justify-content: center;
+  .title {
+    margin-bottom: 30px;
   }
 }
 
-/* Small Mobile */
-@media screen and (max-width: 360px) {
+/* Very Small Mobile Devices (360px and below) */
+@media (max-width: 360px) {
   :root {
-    --fs-h1: 24px;
-    --fs-h2: 20px;
+    --fs-h1: 28px;
+    --fs-h2: 22px;
+  }
+
+  .hero-right {
+    height: 200px;
+  }
+
+  .service-card,
+  .project-card {
+    padding: 20px 16px;
   }
 
   .skills-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
+  .skill-card {
+    padding: 16px;
+  }
 
-  .hero-right {
-    height: 250px;
+  .mobile-nav {
+    width: 85%;
   }
 }
 
-/* Large Desktop */
-@media screen and (min-width: 1440px) {
+/* Large Desktop Screens (1440px and above) */
+@media (min-width: 1440px) {
   .container {
     max-width: 1400px;
   }
 }
 
-/* Fix for mobile menu functionality */
+/* Ultra-wide Screens (1920px and above) */
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1600px;
+  }
+}
+
+/* Fix for mobile menu activation */
 .mobile-nav.active {
   right: 0;
 }
@@ -1072,30 +1090,31 @@ label {
   transform: rotate(-45deg) translate(7px, -6px);
 }
 
-/* Ensure images are responsive */
-img,
-video {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Improve touch targets for mobile */
-@media (max-width: 768px) {
-  .nav-link,
-  .btn,
-  .tag {
-    min-height: 44px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+/* Touch device improvements */
+@media (hover: none) {
+  .btn:hover {
+    transform: none;
   }
-
-  .mobile-nav-link {
-    min-height: 50px;
+  
+  .service-card:hover,
+  .project-card:hover,
+  .skill-card:hover {
+    transform: none;
+  }
+  
+  .hero-visual-container:hover {
+    transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
   }
 }
 
-/* Prevent horizontal scroll */
-html, body {
-  overflow-x: hidden;
+/* Landscape mobile fixes */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    min-height: auto;
+    padding: 100px 0 50px;
+  }
+  
+  .mobile-nav {
+    padding: 80px 24px 40px;
+  }
 }
